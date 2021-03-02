@@ -53,49 +53,6 @@
             var p7 = myElement("p","age");
             p7.innerHTML = "Milliseconds       :"+" "+milliseconddiff;
             div.append(p0,p1,p2,p3,p4,p5,p6,p7);
-            // console.log((today-date)/(365*24*60*60*1000));
-            // console.log(seconddiff);
-        } 
-
-        function convertinage(){
-            var dob = document.getElementById("date").value;
-            var date1 = Date.parse(dob);
-            var today = Date.now();
-            var milliseconddiff1 = today-date1;
-            var yeardiff1  = Math.floor(milliseconddiff1/(1000*60*60*24*30*12));
-            var monthdiff1 = ((milliseconddiff1/(1000*60*60*24*30*12))-yeardiff1)*12;
-            var monthdiff2 = Math.floor(monthdiff1);
-            var daysdiff1  = (monthdiff1-monthdiff2)*30;
-            var daysdiff2 = Math.floor(daysdiff1);
-            var hoursdiff1 = (daysdiff1-daysdiff2)*24;
-            var hoursdiff2 = Math.floor(hoursdiff1);
-            var minutediff1 = (hoursdiff1-hoursdiff2)*60;
-            var minutediff2 = Math.floor(minutediff1);
-            var seconddiff1 = (minutediff1-minutediff2)*60;
-            var seconddiff2 = Math.floor(seconddiff1);
-            var milliseconddiff2 = (seconddiff1-seconddiff2)*1000;
-            var milliseconddiff3 = Math.floor(milliseconddiff2);
-
-            diva.innerHTML = "";
-            var p01 = myElement("p","age");
-            p01.innerHTML = "Actual Current Age divided is:"
-            var p11 = myElement("p","age");
-            p11.innerHTML = "Years              :"+" "+yeardiff1;
-            var p21 = myElement("p","age");
-            p21.innerHTML = "Months             :"+" "+ monthdiff2;
-            var p31 = myElement("p","age");
-            p31.innerHTML = "Days               :"+" "+daysdiff2;
-            var p41 = myElement("p","age");
-            p41.innerHTML = "Hours              :"+" "+hoursdiff2;
-            var p51 = myElement("p","age");
-            p51.innerHTML = "Minutes            :"+" "+minutediff2;
-            var p61 = myElement("p","age");
-            p61.innerHTML = "Seconds            :"+" "+seconddiff2;
-            var p71 = myElement("p","age");
-            p71.innerHTML = "Milliseconds       :"+" "+milliseconddiff3;
-            diva.append(p01,p11,p21,p31,p41,p51,p61,p71);
-            // console.log((today-date)/(365*24*60*60*1000));
-            // console.log(seconddiff);
         } 
 
         function myElement(element,className,idName){
