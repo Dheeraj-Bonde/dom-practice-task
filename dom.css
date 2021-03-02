@@ -1,0 +1,41 @@
+.task1{
+    text-align: center;
+    background-color: lightgray;
+}
+.generate{
+    width: 50%;
+    height: 30px;
+    font-size: larger;
+    margin-left: 25%;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 600;
+}
+#key{
+    text-align: center;
+    background-color: lightsalmon;
+    font-size: 1cm;
+}
+#button{
+    width: 40%;
+    height: 40px;
+    font-size: larger;
+    margin-left: 30%;
+    background-color: violet;
+    color: white;
+    font-weight: 600;
+}
+#date{
+    width : 20%;
+    height: 30px;
+    margin-left: 40%;
+}
+.age{
+    font-size: 0.5cm;
+    word-spacing: 2rem;
+}
+.yearold{
+    width : 70%;
+    margin-left: 15%;
+    background-color: rgb(255, 243, 173);
+}

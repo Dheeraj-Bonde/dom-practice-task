@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+<body>
+    <h1 class="task1">Unique 8 digit number generator</h1>
+    <input type="button" onclick="generator()" value="Generate" class="generate">
+    <div id="key"></div>
+    <div id="task2"><br><br><br>
+        <button onclick="newfile()" style="margin: 5%; padding: 5px; background-color: lightskyblue; font-size: large; border: 4px solid blue">Click here for Task 2 (Date of Birth Manipulator)</button>
+    </div>
+    
+    <script>
+        var found = true;
+        var div = document.querySelector("div#key");
+        
+        //Number generator
+        function generator(){
+            var num = (Math.floor(Math.random()*90000000)+10000000).toString();
+            var num1 = num.split("");
+            num1 = num1.sort((a,b)=>{return a-b});
+            found = true;
+            checkUnique(num1);
+            if(found){
+                div.innerHTML = num;
+            }else{
+                generator();
+            }
+        }
+        //Unique identifier
+        function checkUnique(arr){
+            if(arr.length!==0){
+                if(arr[0]!==arr[1]){
+                    arr = arr.splice(1);
+                    checkUnique(arr);
+                }else{
+                    found = false;
+                }
+            }
+        }
+
+        function newfile(){
+            window.open("dob.html");
+        }
+    </script>
+</body>
+</html>
